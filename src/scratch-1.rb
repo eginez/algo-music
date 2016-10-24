@@ -25,7 +25,7 @@ end
 live_loop :nn do
   notes2 = (chord :F2, :minor, num_octaves: 2, invert: [0, 1, 2].choose)
   #synth :beep, amp: 0.6, note: notes2.look, sustain: 4
-  5.times do
+  8.times do
     tick
     with_fx :krush, amp: 0.10  do
       with_fx :reverb, room: 1 do
@@ -34,9 +34,4 @@ live_loop :nn do
     sleep 0.5
     end
   end
-end
-
-live_loop :l1, sync: :loop_name do
-  sample :elec_blup, beat_stretch: 4, amp: 0.5
-  sleep 4
 end
